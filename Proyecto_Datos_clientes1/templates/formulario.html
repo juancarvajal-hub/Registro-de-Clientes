@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Clientes</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 15px;
+            color: #34495e;
+            font-weight: bold;
+        }
+
+        input, select {
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            margin-top: 5px;
+            font-size: 15px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+
+        #close-btn {
+            background-color: #e74c3c;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        #close-btn:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario de Registro</h1>
+        <form method="POST" action="{{ url_for('guardar') }}">
+            <label>Nombre:</label>
+            <input type="text" name="nombre" required>
+
+            <label>Correo:</label>
+            <input type="email" name="correo" required>
+
+            <label>Edad:</label>
+            <input type="number" name="edad" min="0" required>
+
+            <label>¿Vivienda propia?</label>
+            <select name="vivienda_propia" required>
+                <option value="">Seleccione...</option>
+                <option value="Sí">Sí</option>
+                <option value="No">No</option>
+            </select>
+
+            <label>Estrato:</label>
+            <select name="estrato" required>
+                <option value="">Seleccione...</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+
+            <label>Escolaridad:</label>
+            <select name="escolaridad" required>
+                <option value="">Seleccione...</option>
+                <option value="Primaria">Primaria</option>
+                <option value="Secundaria">Secundaria</option>
+                <option value="Técnico">Técnico</option>
+                <option value="Tecnólogo">Tecnólogo</option>
+                <option value="Universitario">Universitario</option>
+                <option value="Posgrado">Posgrado</option>
+            </select>
+
+            <label>Estado civil:</label>
+            <select name="estado_civil" required>
+                <option value="">Seleccione...</option>
+                <option value="Soltero">Soltero</option>
+                <option value="Casado">Casado</option>
+                <option value="Unión libre">Unión libre</option>
+                <option value="Separado">Separado</option>
+                <option value="Viudo">Viudo</option>
+            </select>
+
+            <label>Número de hijos:</label>
+            <input type="number" name="num_hijos" min="0" required>
+
+            <label>¿Trabaja actualmente?</label>
+            <select name="trabaja" required>
+                <option value="">Seleccione...</option>
+                <option value="Sí">Sí</option>
+                <option value="No">No</option>
+            </select>
+
+            <label>Ciudad:</label>
+            <input type="text" name="ciudad" required>
+
+            <label>¿Sus hijos estudian en colegio privado?</label>
+            <select name="colegio_privado" required>
+                <option value="">Seleccione...</option>
+                <option value="Sí">Sí</option>
+                <option value="No">No</option>
+                <option value="No tiene hijos">No tiene hijos</option>
+            </select>
+
+            <label>¿Cuenta con computador portátil, celular o tablet?</label>
+            <select name="dispositivos" required>
+                <option value="">Seleccione...</option>
+                <option value="Sí">Sí</option>
+                <option value="No">No</option>
+            </select>
+
+            <label>¿Tiene internet en casa?</label>
+            <select name="internet_casa" required>
+                <option value="">Seleccione...</option>
+                <option value="Sí">Sí</option>
+                <option value="No">No</option>
+            </select>
+
+            <label>¿Decidió comprar?</label>
+            <select name="decidio_comprar" required>
+                <option value="">Seleccione...</option>
+                <option value="Sí">Sí</option>
+                <option value="No">No</option>
+            </select>
+
+            <button type="submit">Guardar registro</button>
+        </form>
+        <button id="close-btn">Cerrar</button>
+    </div>
+
+    <!-- 👇 Enlazamos tu archivo JS -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

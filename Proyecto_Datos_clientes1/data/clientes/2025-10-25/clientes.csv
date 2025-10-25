@@ -1,0 +1,5 @@
+﻿fecha;nombre;correo;edad;vivienda_propia;estrato;escolaridad;estado_civil;numero_hijos;trabaja;ciudad;colegio_privado;dispositivos;internet_casa;decision
+2025-10-25;camila ;camila@gmail.com;21;Sí;3;Primaria;Casado;2;Sí;Medellín;Sí;Sí;Sí;Sí
+2025-10-25;Juan Gabriel Carvajal Negrete ;Juangcarvajal@gmail.com;23;Sí;1;Primaria;Soltero;0;Sí;Medellín;Sí;Sí;Sí;Sí
+2025-10-25;camila ;camila@gmail.com;35;Sí;3;Posgrado;Unión libre;2;Sí;Medellín;Sí;Sí;Sí;Sí
+2025-10-25;Juan Gabriel Carvajal Negrete ;jcarvajal@gmail.com;23;No;3;Universitario;Soltero;0;Sí;Medellín;No;Sí;Sí;Sí

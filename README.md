@@ -46,14 +46,19 @@ El formulario solicita la siguiente información:
 
 ---
 ## Recomendación 
+
 Para el correcto uso del formulario virtual usted debera crear un entorno virtual dentro de su carpeta del proyecto y deberá instalar las mismas 
 librerias que fueron usadas en el entorno original, esas librerias seran encontradas en el archivo .txt llamado requiriments dentro de este repositorio.
 Una vez dentro de tu entorno virtual ejecutar la siguiente instrucción:
 pip install -r requirements.txt
+
 ---
 
 ✍️ Autor: **Juan Carvajal**  
 📅 Año: 2025
+
+
+
 <img width="521" height="1054" alt="image" src="https://github.com/user-attachments/assets/7365400f-2ac9-4c1e-847c-b65f9d5cf2ee" />
 
 
